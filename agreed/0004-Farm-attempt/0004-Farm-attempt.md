@@ -6,7 +6,7 @@
 
 # Summary
 
-This proposal outlines an initial design to test the efficiency and security of farming attempts.  This involves making use of the Farming Rate (FR) which is the rate at which farming attempts are made.  It is assumed the farming rate will include payments to care development, content producers and most significantly farmers (or providers of the network resource).
+This proposal outlines an initial design to test the efficiency and security of farming attempts.  This involves making use of the Farming Rate (FR) which is the rate at which farming attempts are made.  It is assumed the farming rate will include payments to core development, content producers and most significantly farmers (or providers of the network resource).
 
 # Motivation
 
@@ -37,7 +37,7 @@ ON receipt of a `Get` request for `ImmutableData` the `DataManager` calculates t
 ## Farm process
 
 When the initial farming test above is true (the modulo division ==0 ) then the `DataManagers` send a Farm request message `Post` to the group closest to the
-combined Hash (i.e. Hash of (`ImmutableData` + `PmidHolder`)). This request includes the original hashes + hash of chunk requested +current farming rate of the group as well as wallet address. This is confirmed at the receiving group and they check for the existence of a safecoin space (ie, there is no safecoin with this name). If this is successful then a further check is made to confirm there is a `DataManager` group (implicit as routing does this). A safecoin is then created and a message sent to the wallet holder of the request.  All these requests must be digitally signed and confirmed at receiving end (implicit in sentnel).
+combined Hash (i.e. Hash of (`ImmutableData` + `PmidHolder`)). This request includes the original hashes + hash of chunk requested +current farming rate of the group as well as wallet address. This is confirmed at the receiving group and they check for the existence of a safecoin space (ie, there is no safecoin with this name). If this is successful then a further check is made to confirm there is a `DataManager` group (implicit as routing does this). A safecoin is then created and a message sent to the wallet holder of the request.  All these requests must be digitally signed and confirmed at receiving end (implicit in sentinel).
 
 # Drawbacks
 
